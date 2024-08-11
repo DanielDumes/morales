@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+body {
+    color: white;
+    background-color: #dcf6ff;
+    font-family: "Poppins", sans-serif;
+}
+
+
+.consejos {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: rgb(229, 255, 246);
+}
+
+.delmedio {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.delmedio h1 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+.delmedio p {
+    font-size: 1.2em;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.consejos-grupo {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.consejo-item {
+    flex: 1 1 calc(33.333% - 20px);
+    background-color: #dbf3ff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.consejo-item h4 {
+    font-size: 1.5em;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.consejo-item p {
+    font-size: 1.1em;
+    color: #666;
+    text-align: justify;
+}
+
+h4{
+    font-weight: bold;
+}
+
+
+/* Agrega una suave animación de aparición al contenedor principal */
+.consejos {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Animación de zoom al título principal */
+.delmedio h1 {
+    animation: zoomIn 0.8s ease-in-out;
+}
+
+/* Animación de desvanecimiento para los párrafos */
+.delmedio p {
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+/* Animación de aparición desde abajo para cada consejo */
+.consejo-item {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-in-out forwards;
+    animation-delay: 0.3s;
+}
+
+/* Añade un retraso en la animación de cada consejo */
+.consejo-item:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.consejo-item:nth-child(3) {
+    animation-delay: 0.7s;
+}
+
+.consejo-item:nth-child(4) {
+    animation-delay: 0.9s;
+}
+
+.consejo-item:nth-child(5) {
+    animation-delay: 1.1s;
+}
+
+.consejo-item:nth-child(6) {
+    animation-delay: 1.3s;
+}
+
+/* Efecto hover para los items de consejos */
+.consejo-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Definiciones de las animaciones claveframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
